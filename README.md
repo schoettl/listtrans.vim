@@ -10,6 +10,7 @@ This plugin toggles a sentence separated by , or ; to a list.
 ## Toggle lists
 
 ;l   :call ListTrans_toggle_format()<CR>
+
 ;l   :call ListTrans_toggle_format('visual')<CR>
 
 ## Conjunctions
