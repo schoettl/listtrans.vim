@@ -9,15 +9,13 @@ This plugin toggles a sentence separated by , or ; to a list.
 
 ## Toggle lists
 
-;l   :call ListTrans_toggle_format()<CR>
-
-;l   :call ListTrans_toggle_format('visual')<CR>
+    ;l   :call ListTrans_toggle_format()<CR>
+    ;l   :call ListTrans_toggle_format('visual')<CR>
 
 ## Conjunctions
 
-Default conjunction: and
-Conjunctions: and not, and, plus, with, or else, or otherwise, or, nor, but not,
-but, else, otherwise
+    Default conjunction: and
+    Conjunctions: and not, and, plus, with, or else, or otherwise, or, nor, but not, but, else, otherwise
 
 
 
