@@ -6,13 +6,13 @@
 "##                                                                  ##
 "##  To use:                                                         ##
 "##                                                                  ##
-"##     nmap <SOMEKEY>  :call ListTrans_toggle_format()<CR>          ##
-"##     vmap <SOMEKEY>  :call ListTrans_toggle_format('visual')<CR>  ##
+"##     nmap SOMEKEYS  <Plug>ListtransToggle                         ##
+"##     vmap SOMEKEYS  <Plug>ListtransToggleVisual                   ##
 "##                                                                  ##
 "##  For example:                                                    ##
 "##                                                                  ##
-"##     nmap  ;l   :call ListTrans_toggle_format()<CR>               ##
-"##     vmap  ;l   :call ListTrans_toggle_format('visual')<CR>       ##
+"##     nmap  ;l   <Plug>ListtransToggle                             ##
+"##     vmap  ;l   <Plug>ListtransToggleVisual                       ##
 "##                                                                  ##
 "######################################################################
 
@@ -40,7 +40,7 @@ let g:LT_CONJUNCTIONS  = [
 let s:LT_CONJ_PAT = join(g:LT_CONJUNCTIONS, '\|')
 
 " This is the entire interface...
-function! ListTrans_toggle_format (...) range
+function! ListTrans_toggle_format (...)
     " Extract the target text...
     if a:0
         silent normal gvy
@@ -116,6 +116,9 @@ function! ListTrans_toggle_format (...) range
     silent normal gvp
 
 endfunction
+
+nnoremap <silent> <Plug>ListtransToggle        :call ListTrans_toggle_format()<CR>
+vnoremap <silent> <Plug>ListtransToggleVisual  <Esc>:call ListTrans_toggle_format('visual')<CR>
 
 " Restore previous external compatibility options
 let &cpo = s:save_cpo
