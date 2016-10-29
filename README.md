@@ -1,10 +1,18 @@
-# listtrans.vim 
+# listtrans.vim
 
 Created by [Damian Conway](https://github.com/thoughtstream)
 
 Watch his [video at OSCON](https://www.youtube.com/watch?v=aHm36-na4-4)
 
-This plugin toggles a sentence separated by , or ; to a list.
+This plugin toggles a sentence separated by `,` or `;` to a list.
+
+For example `a, b, and c` becomes
+
+    - a
+    - b
+    - c
+
+and vice versa.
 
 
 ## Toggle lists
@@ -29,11 +37,9 @@ Toggling from a list to a sentence, it will add 'and' at the end of list item.
 
 ## Conjunctions
 
-The default conjuction is 'and'. If you use other conjuctions which listed below, it will be added in the list 
-before the last item.
+The default conjuction is `and`. If you use other conjuctions which are listed below,
+it will be added in the list before the last item.
 
-    Default conjunction: and
-    Conjunctions: and not, and, plus, with, or else, or otherwise, or, nor, but not, but, else, otherwise
+Default conjunction: `and`
 
-
-
+Other conjunctions: `and not`, `and`, `plus`, `with`, `or else`, `or otherwise`, `or`, `nor`, `but not`, `but`, `else`, `otherwise`
